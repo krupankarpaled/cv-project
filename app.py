@@ -69,7 +69,8 @@ def ensure_session():
 @app.route('/')
 def index():
     """Render main page."""
-    return render_template('index_enhanced.html')
+    ensure_session()
+    return render_template('index.html')
 
 
 @app.route('/health')
